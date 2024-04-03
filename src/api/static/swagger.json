@@ -1,0 +1,130 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Documentation",
+        "version": "1.0.0",
+        "description": "This is an example API documentation.",
+        "termsOfService": "http://facware.com/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.facware.com",
+            "email": "respinozabarboza@gmail.com"
+        },
+        "license": {
+            "name": "The MIT License",
+            "url": "https://opensource.org/license/mit"
+        }
+    }
+    ,"paths": {
+        "/api/welcome/hello": {
+            "get": {
+                "tags": [
+                    "Welcome"
+                ],
+                "summary": "demo message",
+                "description": "Welcome message",
+                "produces": [
+                    "application/json"
+                    ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/welcome/hello/{name}": {
+            "get": {
+                "tags": [
+                    "Welcome"
+                ],
+                "summary": "Custom hello",
+                "description": "Custom hello message",
+                "produces": [
+                    "application/json"
+                    ],
+                    "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The name that needs to be provided",
+                        "required": true,
+                        "schema": {
+                        "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/demo/increment/{number}": {
+            "get": {
+                "tags": [
+                    "Demo"
+                ],
+                "summary": "Increment number",
+                "description": "Increment number",
+                "produces": [
+                    "application/json"
+                    ],
+                    "parameters": [
+                    {
+                        "name": "number",
+                        "in": "path",
+                        "description": "The number that needs to be provided",
+                        "required": true,
+                        "schema": {
+                        "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/demo/sum/{number1}/{number2}": {
+            "get": {
+                "tags": [
+                    "Demo"
+                ],
+                "summary": "Sum two numbers",
+                "description": "Sum two numbers",
+                "produces": [
+                    "application/json"
+                    ],
+                    "parameters": [
+                    {
+                        "name": "number1",
+                        "in": "path",
+                        "description": "The first number that needs to be provided",
+                        "required": true,
+                        "schema": {
+                        "type": "string"
+                        }
+                    },
+                    {
+                        "name": "number2",
+                        "in": "path",
+                        "description": "The second number that needs to be provided",
+                        "required": true,
+                        "schema": {
+                        "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}

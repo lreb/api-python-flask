@@ -1,0 +1,16 @@
+config:
+  target: http://127.0.0.1:105
+  phases:
+    - duration: 3
+      arrivalRate: 5
+  defaults:
+    headers:
+      User-Agent: Artillery
+scenarios:
+  - flow:
+      - get:
+          url: "/api/welcome/hello"
+      - get:
+          url: "/api/welcome/hello/chino"
+      - get:
+          url: "/api/demo/increment/2"
